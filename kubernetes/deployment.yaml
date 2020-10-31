@@ -7,8 +7,8 @@ spec:
     app: hello-python
   type: LoadBalancer
   ports:
-  - protocol: "TCP"
-    port: 6000
+  - protocol: TCP
+    port: 5000
     targetPort: 5000
 
 
@@ -19,6 +19,9 @@ metadata:
   name: hello-python
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: hello-python
   template:
     metadata:
       labels:
