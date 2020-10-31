@@ -1,35 +1,21 @@
-apiVersion: v1
-kind: Service
-metadata:
-  name: hello-python-service
-spec:
-  selector:
-    app: hello-python
-  type: LoadBalancer
-  ports:
-  - protocol: TCP
-    port: 5000
-    targetPort: 5000
-
-
 ---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-python
+  name: hello-python-green
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: hello-python
+      app: hello-python-green
   template:
     metadata:
       labels:
-        app: hello-python
+        app: hello-python-green
     spec:
       containers:
       - name: hello-python
-        image: gmanal1005/hello-python:blue
+        image: gmanal1005/hello-python:green
         imagePullPolicy: Never
         ports:
         - containerPort: 5000
