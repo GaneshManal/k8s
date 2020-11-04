@@ -17,6 +17,6 @@ spec:
       containers:
       - name: hello-python
         image: gmanal1005/hello-python:green
-        imagePullPolicy: ifNotPresent
+        imagePullPolicy: IfNotPresent
         ports:
         - containerPort: 5000
