@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: hello-python-blue
+        owner: maplelabs
     spec:
       containers:
       - name: hello-python
