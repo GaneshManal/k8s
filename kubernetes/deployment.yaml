@@ -12,6 +12,7 @@ spec:
     metadata:
       labels:
         app: hello-python-green
+        onwer: maplelabs
     spec:
       containers:
       - name: hello-python
