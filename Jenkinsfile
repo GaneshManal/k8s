@@ -5,7 +5,9 @@ Properties properties = new java.util.Properties();
 pipeline {
   agent any
   options { timestamps () }
-  environment {}
+  environment {
+    JENKINS_OCI='http://127.0.0.1:9002'
+  }
   stages {
 
     stage ('build-app') {
