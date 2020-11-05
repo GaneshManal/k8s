@@ -1,7 +1,3 @@
-import java.util.Properties;
-Properties properties = new java.util.Properties();
-
-
 pipeline {
   agent any
   options { timestamps () }
